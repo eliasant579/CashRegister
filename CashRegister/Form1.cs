@@ -16,5 +16,20 @@ namespace CashRegister
         {
             InitializeComponent();
         }
+
+        private void totalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newOrderLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
