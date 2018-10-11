@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.burgerLabel = new System.Windows.Forms.Label();
+            this.friesLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.burgersTextBox = new System.Windows.Forms.TextBox();
+            this.friesTextBox = new System.Windows.Forms.TextBox();
+            this.drinksTextBox = new System.Windows.Forms.TextBox();
             this.totalButton = new System.Windows.Forms.Button();
             this.priceTextLabel = new System.Windows.Forms.Label();
             this.taxTextLabel = new System.Windows.Forms.Label();
@@ -50,53 +50,53 @@
             this.newOrderLabel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // burgerLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.burgerLabel.AutoSize = true;
+            this.burgerLabel.Location = new System.Drawing.Point(80, 66);
+            this.burgerLabel.Name = "burgerLabel";
+            this.burgerLabel.Size = new System.Drawing.Size(58, 17);
+            this.burgerLabel.TabIndex = 0;
+            this.burgerLabel.Text = "Burgers";
             // 
-            // label2
+            // friesLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.friesLabel.AutoSize = true;
+            this.friesLabel.Location = new System.Drawing.Point(80, 94);
+            this.friesLabel.Name = "friesLabel";
+            this.friesLabel.Size = new System.Drawing.Size(39, 17);
+            this.friesLabel.TabIndex = 1;
+            this.friesLabel.Text = "Fries";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(80, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.label3.Text = "Drinks";
             // 
-            // textBox1
+            // burgersTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.burgersTextBox.Location = new System.Drawing.Point(198, 63);
+            this.burgersTextBox.Name = "burgersTextBox";
+            this.burgersTextBox.Size = new System.Drawing.Size(100, 22);
+            this.burgersTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // friesTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(197, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.friesTextBox.Location = new System.Drawing.Point(197, 91);
+            this.friesTextBox.Name = "friesTextBox";
+            this.friesTextBox.Size = new System.Drawing.Size(100, 22);
+            this.friesTextBox.TabIndex = 4;
             // 
-            // textBox3
+            // drinksTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(198, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.drinksTextBox.Location = new System.Drawing.Point(198, 119);
+            this.drinksTextBox.Name = "drinksTextBox";
+            this.drinksTextBox.Size = new System.Drawing.Size(100, 22);
+            this.drinksTextBox.TabIndex = 5;
             // 
             // totalButton
             // 
@@ -113,54 +113,51 @@
             this.priceTextLabel.AutoSize = true;
             this.priceTextLabel.Location = new System.Drawing.Point(80, 200);
             this.priceTextLabel.Name = "priceTextLabel";
-            this.priceTextLabel.Size = new System.Drawing.Size(46, 17);
+            this.priceTextLabel.Size = new System.Drawing.Size(36, 17);
             this.priceTextLabel.TabIndex = 7;
-            this.priceTextLabel.Text = "label4";
+            this.priceTextLabel.Text = "Cost";
             // 
             // taxTextLabel
             // 
             this.taxTextLabel.AutoSize = true;
             this.taxTextLabel.Location = new System.Drawing.Point(80, 227);
             this.taxTextLabel.Name = "taxTextLabel";
-            this.taxTextLabel.Size = new System.Drawing.Size(46, 17);
+            this.taxTextLabel.Size = new System.Drawing.Size(31, 17);
             this.taxTextLabel.TabIndex = 8;
-            this.taxTextLabel.Text = "label5";
+            this.taxTextLabel.Text = "Tax";
             // 
             // totalTextLabel
             // 
             this.totalTextLabel.AutoSize = true;
             this.totalTextLabel.Location = new System.Drawing.Point(80, 254);
             this.totalTextLabel.Name = "totalTextLabel";
-            this.totalTextLabel.Size = new System.Drawing.Size(46, 17);
+            this.totalTextLabel.Size = new System.Drawing.Size(40, 17);
             this.totalTextLabel.TabIndex = 9;
-            this.totalTextLabel.Text = "label6";
+            this.totalTextLabel.Text = "Total";
             // 
             // priceOutLabel
             // 
             this.priceOutLabel.AutoSize = true;
             this.priceOutLabel.Location = new System.Drawing.Point(252, 200);
             this.priceOutLabel.Name = "priceOutLabel";
-            this.priceOutLabel.Size = new System.Drawing.Size(46, 17);
+            this.priceOutLabel.Size = new System.Drawing.Size(0, 17);
             this.priceOutLabel.TabIndex = 10;
-            this.priceOutLabel.Text = "label7";
             // 
             // taxOutLabel
             // 
             this.taxOutLabel.AutoSize = true;
             this.taxOutLabel.Location = new System.Drawing.Point(252, 227);
             this.taxOutLabel.Name = "taxOutLabel";
-            this.taxOutLabel.Size = new System.Drawing.Size(46, 17);
+            this.taxOutLabel.Size = new System.Drawing.Size(0, 17);
             this.taxOutLabel.TabIndex = 11;
-            this.taxOutLabel.Text = "label8";
             // 
             // totalOutLabel
             // 
             this.totalOutLabel.AutoSize = true;
             this.totalOutLabel.Location = new System.Drawing.Point(252, 254);
             this.totalOutLabel.Name = "totalOutLabel";
-            this.totalOutLabel.Size = new System.Drawing.Size(46, 17);
+            this.totalOutLabel.Size = new System.Drawing.Size(0, 17);
             this.totalOutLabel.TabIndex = 12;
-            this.totalOutLabel.Text = "label9";
             // 
             // label10
             // 
@@ -173,16 +170,16 @@
             // tenderedTextLabel
             // 
             this.tenderedTextLabel.AutoSize = true;
-            this.tenderedTextLabel.Location = new System.Drawing.Point(80, 344);
+            this.tenderedTextLabel.Location = new System.Drawing.Point(79, 322);
             this.tenderedTextLabel.Name = "tenderedTextLabel";
-            this.tenderedTextLabel.Size = new System.Drawing.Size(54, 17);
+            this.tenderedTextLabel.Size = new System.Drawing.Size(70, 17);
             this.tenderedTextLabel.TabIndex = 14;
-            this.tenderedTextLabel.Text = "label11";
+            this.tenderedTextLabel.Text = "Tendered";
             // 
             // changeTextLabel
             // 
             this.changeTextLabel.AutoSize = true;
-            this.changeTextLabel.Location = new System.Drawing.Point(79, 404);
+            this.changeTextLabel.Location = new System.Drawing.Point(84, 404);
             this.changeTextLabel.Name = "changeTextLabel";
             this.changeTextLabel.Size = new System.Drawing.Size(54, 17);
             this.changeTextLabel.TabIndex = 15;
@@ -191,7 +188,7 @@
             // changeOutLabel
             // 
             this.changeOutLabel.AutoSize = true;
-            this.changeOutLabel.Location = new System.Drawing.Point(244, 404);
+            this.changeOutLabel.Location = new System.Drawing.Point(244, 395);
             this.changeOutLabel.Name = "changeOutLabel";
             this.changeOutLabel.Size = new System.Drawing.Size(54, 17);
             this.changeOutLabel.TabIndex = 16;
@@ -199,7 +196,7 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(82, 369);
+            this.changeButton.Location = new System.Drawing.Point(82, 350);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(215, 32);
             this.changeButton.TabIndex = 17;
@@ -209,7 +206,7 @@
             // 
             // tenderedTextBox
             // 
-            this.tenderedTextBox.Location = new System.Drawing.Point(197, 341);
+            this.tenderedTextBox.Location = new System.Drawing.Point(198, 322);
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(100, 22);
             this.tenderedTextBox.TabIndex = 18;
@@ -243,12 +240,12 @@
             this.Controls.Add(this.taxTextLabel);
             this.Controls.Add(this.priceTextLabel);
             this.Controls.Add(this.totalButton);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.drinksTextBox);
+            this.Controls.Add(this.friesTextBox);
+            this.Controls.Add(this.burgersTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.friesLabel);
+            this.Controls.Add(this.burgerLabel);
             this.Name = "Form1";
             this.Text = "Cash Register";
             this.ResumeLayout(false);
@@ -258,12 +255,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label burgerLabel;
+        private System.Windows.Forms.Label friesLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox burgersTextBox;
+        private System.Windows.Forms.TextBox friesTextBox;
+        private System.Windows.Forms.TextBox drinksTextBox;
         private System.Windows.Forms.Button totalButton;
         private System.Windows.Forms.Label priceTextLabel;
         private System.Windows.Forms.Label taxTextLabel;
