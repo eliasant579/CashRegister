@@ -15,7 +15,7 @@ namespace CashRegister
         const double TAX = 0.13;
         const double BURGER_PRICE = 2.49, FRIES_PRICE = 1.89, DRINK_PRICE = 0.99;
         int burgerN, friesN, drinkN;
-        double taxprice, total, price;
+        double taxprice, total, price, tendered;
 
         public Form1()
         {
@@ -45,7 +45,9 @@ namespace CashRegister
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-           
+            tendered = Convert.ToDouble(tenderedTextBox.Text);
+            tendered -= total;
+            changeOutLabel.Text = tendered.ToString("C");
         }
 
         private void newOrderLabel_Click(object sender, EventArgs e)

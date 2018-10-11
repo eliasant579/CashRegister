@@ -179,20 +179,19 @@
             // changeTextLabel
             // 
             this.changeTextLabel.AutoSize = true;
-            this.changeTextLabel.Location = new System.Drawing.Point(84, 404);
+            this.changeTextLabel.Location = new System.Drawing.Point(84, 395);
             this.changeTextLabel.Name = "changeTextLabel";
-            this.changeTextLabel.Size = new System.Drawing.Size(54, 17);
+            this.changeTextLabel.Size = new System.Drawing.Size(57, 17);
             this.changeTextLabel.TabIndex = 15;
-            this.changeTextLabel.Text = "label12";
+            this.changeTextLabel.Text = "Change";
             // 
             // changeOutLabel
             // 
             this.changeOutLabel.AutoSize = true;
             this.changeOutLabel.Location = new System.Drawing.Point(244, 395);
             this.changeOutLabel.Name = "changeOutLabel";
-            this.changeOutLabel.Size = new System.Drawing.Size(54, 17);
+            this.changeOutLabel.Size = new System.Drawing.Size(0, 17);
             this.changeOutLabel.TabIndex = 16;
-            this.changeOutLabel.Text = "label13";
             // 
             // changeButton
             // 
