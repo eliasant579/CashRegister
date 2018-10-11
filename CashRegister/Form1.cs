@@ -25,12 +25,53 @@ namespace CashRegister
         private void totalButton_Click(object sender, EventArgs e)
         {
             //storing
-            try { burgerN = Convert.ToInt16(burgersTextBox.Text); }
-            catch { }
-            try { friesN = Convert.ToInt16(friesTextBox.Text); }
-            catch { }
-            try { drinkN = Convert.ToInt16(drinksTextBox.Text); }
-            catch { }
+            try
+            {
+                burgerN = Convert.ToInt16(burgersTextBox.Text);
+                if (burgerN < 0)
+                {
+                    burgersTextBox.Text = null;
+                    generalOutLabel.Text = "input error";
+                    return;
+                }
+            }
+            catch
+            {
+                generalOutLabel.Text = "error";
+                return;
+            }
+
+            try
+            {
+                friesN = Convert.ToInt16(friesTextBox.Text);
+                if (friesN < 0)
+                {
+                    friesTextBox.Text = null;
+                    generalOutLabel.Text = "error";
+                    return;
+                }
+            }
+            catch
+            {
+                generalOutLabel.Text = "error";
+                return;
+            }
+
+            try
+            {
+                drinkN = Convert.ToInt16(drinksTextBox.Text);
+                if (drinkN < 0)
+                {
+                    drinksTextBox.Text = null;
+                    generalOutLabel.Text = "input error";
+                    return;
+                }
+            }
+            catch
+            {
+                generalOutLabel.Text = "input error";
+                return;
+            }
 
             //some math stuff
             price = BURGER_PRICE * burgerN + FRIES_PRICE * friesN + DRINK_PRICE * drinkN;
@@ -61,6 +102,16 @@ namespace CashRegister
             priceOutLabel.Text = null;
             changeOutLabel.Text = null;
             tenderedTextBox.Text = null;
+
+            reciveButton.Visible = false;
+
+            burgerN = 0;
+            friesN = 0;
+            drinkN = 0;
+            taxprice = 0;
+            total = 0;
+            price = 0;
+            tendered = 0;
         }
     }
 }

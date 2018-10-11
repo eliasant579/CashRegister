@@ -48,6 +48,8 @@
             this.changeButton = new System.Windows.Forms.Button();
             this.tenderedTextBox = new System.Windows.Forms.TextBox();
             this.newOrderLabel = new System.Windows.Forms.Button();
+            this.reciveButton = new System.Windows.Forms.Button();
+            this.generalOutLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // burgerLabel
@@ -162,15 +164,15 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(80, 290);
+            this.label10.Location = new System.Drawing.Point(81, 281);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(218, 14);
+            this.label10.Size = new System.Drawing.Size(218, 10);
             this.label10.TabIndex = 13;
             // 
             // tenderedTextLabel
             // 
             this.tenderedTextLabel.AutoSize = true;
-            this.tenderedTextLabel.Location = new System.Drawing.Point(79, 322);
+            this.tenderedTextLabel.Location = new System.Drawing.Point(80, 301);
             this.tenderedTextLabel.Name = "tenderedTextLabel";
             this.tenderedTextLabel.Size = new System.Drawing.Size(70, 17);
             this.tenderedTextLabel.TabIndex = 14;
@@ -179,7 +181,7 @@
             // changeTextLabel
             // 
             this.changeTextLabel.AutoSize = true;
-            this.changeTextLabel.Location = new System.Drawing.Point(84, 395);
+            this.changeTextLabel.Location = new System.Drawing.Point(81, 374);
             this.changeTextLabel.Name = "changeTextLabel";
             this.changeTextLabel.Size = new System.Drawing.Size(57, 17);
             this.changeTextLabel.TabIndex = 15;
@@ -188,14 +190,14 @@
             // changeOutLabel
             // 
             this.changeOutLabel.AutoSize = true;
-            this.changeOutLabel.Location = new System.Drawing.Point(244, 395);
+            this.changeOutLabel.Location = new System.Drawing.Point(252, 374);
             this.changeOutLabel.Name = "changeOutLabel";
             this.changeOutLabel.Size = new System.Drawing.Size(0, 17);
             this.changeOutLabel.TabIndex = 16;
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(82, 350);
+            this.changeButton.Location = new System.Drawing.Point(82, 329);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(215, 32);
             this.changeButton.TabIndex = 17;
@@ -205,7 +207,7 @@
             // 
             // tenderedTextBox
             // 
-            this.tenderedTextBox.Location = new System.Drawing.Point(198, 322);
+            this.tenderedTextBox.Location = new System.Drawing.Point(198, 301);
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(100, 22);
             this.tenderedTextBox.TabIndex = 18;
@@ -220,11 +222,31 @@
             this.newOrderLabel.UseVisualStyleBackColor = true;
             this.newOrderLabel.Click += new System.EventHandler(this.newOrderLabel_Click);
             // 
+            // reciveButton
+            // 
+            this.reciveButton.Location = new System.Drawing.Point(84, 397);
+            this.reciveButton.Name = "reciveButton";
+            this.reciveButton.Size = new System.Drawing.Size(214, 24);
+            this.reciveButton.TabIndex = 20;
+            this.reciveButton.Text = "Print recive";
+            this.reciveButton.UseVisualStyleBackColor = true;
+            this.reciveButton.Visible = false;
+            // 
+            // generalOutLabel
+            // 
+            this.generalOutLabel.AutoSize = true;
+            this.generalOutLabel.Location = new System.Drawing.Point(255, 22);
+            this.generalOutLabel.Name = "generalOutLabel";
+            this.generalOutLabel.Size = new System.Drawing.Size(0, 17);
+            this.generalOutLabel.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.generalOutLabel);
+            this.Controls.Add(this.reciveButton);
             this.Controls.Add(this.newOrderLabel);
             this.Controls.Add(this.tenderedTextBox);
             this.Controls.Add(this.changeButton);
@@ -274,6 +296,8 @@
         private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.TextBox tenderedTextBox;
         private System.Windows.Forms.Button newOrderLabel;
+        private System.Windows.Forms.Button reciveButton;
+        private System.Windows.Forms.Label generalOutLabel;
     }
 }
 
