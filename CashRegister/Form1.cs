@@ -122,11 +122,22 @@ namespace CashRegister
         {
             Graphics g = this.CreateGraphics();
             SoundPlayer recivePlayer = new SoundPlayer(Properties.Resources.open);
-            Font drawFont = new Font("Arial", 16, FontStyle.Bold);
+            Font drawFont = new Font("Arial", 10);
             SolidBrush rectangleBrush = new SolidBrush(Color.White);
             SolidBrush stringBrush = new SolidBrush(Color.Black);
 
             g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
+
+            g.DrawString("Burgers:                  ", drawFont, stringBrush, 320, 110);
+            g.DrawString("Fries:                    ", drawFont, stringBrush, 320, 130);
+            g.DrawString("Drinks:                   ", drawFont, stringBrush, 320, 150);
+            g.DrawString("Cost:                     ", drawFont, stringBrush, 320, 170);
+            g.DrawString("Tax:                      ", drawFont, stringBrush, 320, 190);
+            g.DrawString("Total:                    ", drawFont, stringBrush, 320, 210);
+            g.DrawString("Tendered:                 ", drawFont, stringBrush, 320, 230);
+            g.DrawString("Change:                   ", drawFont, stringBrush, 320, 250);
+            g.DrawString("         THANK YOU!       ", drawFont, stringBrush, 320, 280);
+
 
 
         }
