@@ -214,7 +214,7 @@
             // 
             // newOrderLabel
             // 
-            this.newOrderLabel.Location = new System.Drawing.Point(483, 386);
+            this.newOrderLabel.Location = new System.Drawing.Point(409, 386);
             this.newOrderLabel.Name = "newOrderLabel";
             this.newOrderLabel.Size = new System.Drawing.Size(215, 35);
             this.newOrderLabel.TabIndex = 19;
@@ -231,6 +231,7 @@
             this.reciveButton.Text = "Print recive";
             this.reciveButton.UseVisualStyleBackColor = true;
             this.reciveButton.Visible = false;
+            this.reciveButton.Click += new System.EventHandler(this.reciveButton_Click);
             // 
             // generalOutLabel
             // 

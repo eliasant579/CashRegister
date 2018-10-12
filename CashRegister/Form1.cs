@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,7 @@ namespace CashRegister
 
         private void totalButton_Click(object sender, EventArgs e)
         {
+            int error = 0;
             //storing
             try
             {
@@ -32,13 +34,14 @@ namespace CashRegister
                 {
                     burgersTextBox.Text = null;
                     generalOutLabel.Text = "input error";
-                    return;
+                    error++;
                 }
             }
             catch
             {
-                generalOutLabel.Text = "error";
-                return;
+                burgersTextBox.Text = null;
+                generalOutLabel.Text = "input error";
+                error++;
             }
 
             try
@@ -47,14 +50,15 @@ namespace CashRegister
                 if (friesN < 0)
                 {
                     friesTextBox.Text = null;
-                    generalOutLabel.Text = "error";
-                    return;
+                    generalOutLabel.Text = "input error";
+                    error++;
                 }
             }
             catch
             {
-                generalOutLabel.Text = "error";
-                return;
+                friesTextBox.Text = null;
+                generalOutLabel.Text = "input error";
+                error++;
             }
 
             try
@@ -64,14 +68,19 @@ namespace CashRegister
                 {
                     drinksTextBox.Text = null;
                     generalOutLabel.Text = "input error";
-                    return;
+                    error++;
                 }
             }
             catch
             {
+                drinksTextBox.Text = null;
                 generalOutLabel.Text = "input error";
-                return;
+                error++;
             }
+
+            //if there's more than one error it breaks here, so ALL the code preceding is processed
+            if (error != 0)
+            { return; }
 
             //some math stuff
             price = BURGER_PRICE * burgerN + FRIES_PRICE * friesN + DRINK_PRICE * drinkN;
@@ -82,13 +91,44 @@ namespace CashRegister
             priceOutLabel.Text = price.ToString("C");
             taxOutLabel.Text = taxprice.ToString("C");
             totalOutLabel.Text = total.ToString("C");
+            generalOutLabel.Text = null;
         }
 
         private void changeButton_Click(object sender, EventArgs e)
         {
-            tendered = Convert.ToDouble(tenderedTextBox.Text);
-            tendered -= total;
-            changeOutLabel.Text = tendered.ToString("C");
+            try
+            {
+                if (Convert.ToInt16(tenderedTextBox.Text) < total)
+                {
+                    tenderedTextBox.Text = null;
+                    generalOutLabel.Text = "input error";
+                    return;
+                }
+                tendered = Convert.ToDouble(tenderedTextBox.Text);
+                tendered -= total;
+                changeOutLabel.Text = tendered.ToString("C");
+
+                reciveButton.Visible = true;
+            }
+            catch
+            {
+                tenderedTextBox.Text = null;
+                generalOutLabel.Text = "input error";
+                return;
+            }
+        }
+
+        private void reciveButton_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            SoundPlayer recivePlayer = new SoundPlayer(Properties.Resources.open);
+            Font drawFont = new Font("Arial", 16, FontStyle.Bold);
+            SolidBrush rectangleBrush = new SolidBrush(Color.White);
+            SolidBrush stringBrush = new SolidBrush(Color.Black);
+
+            g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
+
+
         }
 
         private void newOrderLabel_Click(object sender, EventArgs e)
@@ -112,6 +152,13 @@ namespace CashRegister
             total = 0;
             price = 0;
             tendered = 0;
+
+            //draw a rectangle with the form backcolor over the recive
+            Graphics g = this.CreateGraphics();
+            SolidBrush rectangleBrush = new SolidBrush(this.BackColor);
+
+            g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
+
         }
     }
 }
