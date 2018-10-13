@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,7 +17,7 @@ namespace CashRegister
         const double TAX = 0.13;
         const double BURGER_PRICE = 2.49, FRIES_PRICE = 1.89, DRINK_PRICE = 0.99;
         int burgerN, friesN, drinkN;
-        double taxprice, total, price, tendered;
+        double taxprice, total, price, tendered, change;
 
         public Form1()
         {
@@ -105,8 +106,8 @@ namespace CashRegister
                     return;
                 }
                 tendered = Convert.ToDouble(tenderedTextBox.Text);
-                tendered -= total;
-                changeOutLabel.Text = tendered.ToString("C");
+                change= tendered - total;
+                changeOutLabel.Text = change.ToString("C");
 
                 reciveButton.Visible = true;
             }
@@ -122,21 +123,36 @@ namespace CashRegister
         {
             Graphics g = this.CreateGraphics();
             SoundPlayer recivePlayer = new SoundPlayer(Properties.Resources.open);
+            SoundPlayer printPlayer = new SoundPlayer(Properties.Resources.print);
             Font drawFont = new Font("Arial", 10);
+            Font titleFont = new Font("Arial", 16, FontStyle.Bold);
             SolidBrush rectangleBrush = new SolidBrush(Color.White);
             SolidBrush stringBrush = new SolidBrush(Color.Black);
 
+            recivePlayer.PlaySync();
             g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
 
-            g.DrawString("Burgers:                  ", drawFont, stringBrush, 320, 110);
-            g.DrawString("Fries:                    ", drawFont, stringBrush, 320, 130);
-            g.DrawString("Drinks:                   ", drawFont, stringBrush, 320, 150);
-            g.DrawString("Cost:                     ", drawFont, stringBrush, 320, 170);
-            g.DrawString("Tax:                      ", drawFont, stringBrush, 320, 190);
-            g.DrawString("Total:                    ", drawFont, stringBrush, 320, 210);
-            g.DrawString("Tendered:                 ", drawFont, stringBrush, 320, 230);
-            g.DrawString("Change:                   ", drawFont, stringBrush, 320, 250);
-            g.DrawString("         THANK YOU!       ", drawFont, stringBrush, 320, 280);
+            printPlayer.Play();
+            Thread.Sleep(100);
+            g.DrawString("  Ram'Donalds    ", titleFont, stringBrush, 320, 75);
+            Thread.Sleep(100);
+            g.DrawString("Burgers:                " + burgerN, drawFont, stringBrush, 320, 110);
+            Thread.Sleep(100);
+            g.DrawString("Fries:                    " + friesN, drawFont, stringBrush, 320, 130);
+            Thread.Sleep(100);
+            g.DrawString("Drinks:                  " + drinkN, drawFont, stringBrush, 320, 150);
+            Thread.Sleep(100);
+            g.DrawString("Cost:                    " + price.ToString("C"), drawFont, stringBrush, 320, 170);
+            Thread.Sleep(100);
+            g.DrawString("Tax:                      " + taxprice.ToString("C"), drawFont, stringBrush, 320, 190);
+            Thread.Sleep(100);
+            g.DrawString("Total:                    " + total.ToString("C"), drawFont, stringBrush, 320, 210);
+            Thread.Sleep(100);
+            g.DrawString("Tendered:              " + tendered.ToString("C"), drawFont, stringBrush, 320, 230);
+            Thread.Sleep(100);
+            g.DrawString("Change:                " + change.ToString("C"), drawFont, stringBrush, 320, 250);
+            Thread.Sleep(100);
+            g.DrawString("         THANK YOU!       ", drawFont, stringBrush, 320, 270);
 
 
 
