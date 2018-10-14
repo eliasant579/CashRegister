@@ -102,12 +102,13 @@
             // 
             // totalButton
             // 
+            this.totalButton.BackColor = System.Drawing.Color.Red;
             this.totalButton.Location = new System.Drawing.Point(83, 154);
             this.totalButton.Name = "totalButton";
             this.totalButton.Size = new System.Drawing.Size(215, 23);
             this.totalButton.TabIndex = 6;
             this.totalButton.Text = "Total";
-            this.totalButton.UseVisualStyleBackColor = true;
+            this.totalButton.UseVisualStyleBackColor = false;
             this.totalButton.Click += new System.EventHandler(this.totalButton_Click);
             // 
             // priceTextLabel
@@ -197,12 +198,13 @@
             // 
             // changeButton
             // 
+            this.changeButton.BackColor = System.Drawing.Color.Red;
             this.changeButton.Location = new System.Drawing.Point(82, 329);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(215, 32);
             this.changeButton.TabIndex = 17;
             this.changeButton.Text = "Change";
-            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // tenderedTextBox
@@ -214,22 +216,24 @@
             // 
             // newOrderLabel
             // 
+            this.newOrderLabel.BackColor = System.Drawing.Color.Red;
             this.newOrderLabel.Location = new System.Drawing.Point(409, 386);
             this.newOrderLabel.Name = "newOrderLabel";
             this.newOrderLabel.Size = new System.Drawing.Size(215, 35);
             this.newOrderLabel.TabIndex = 19;
             this.newOrderLabel.Text = "New Order";
-            this.newOrderLabel.UseVisualStyleBackColor = true;
+            this.newOrderLabel.UseVisualStyleBackColor = false;
             this.newOrderLabel.Click += new System.EventHandler(this.newOrderLabel_Click);
             // 
             // reciveButton
             // 
+            this.reciveButton.BackColor = System.Drawing.Color.Red;
             this.reciveButton.Location = new System.Drawing.Point(84, 397);
             this.reciveButton.Name = "reciveButton";
             this.reciveButton.Size = new System.Drawing.Size(214, 24);
             this.reciveButton.TabIndex = 20;
             this.reciveButton.Text = "Print recive";
-            this.reciveButton.UseVisualStyleBackColor = true;
+            this.reciveButton.UseVisualStyleBackColor = false;
             this.reciveButton.Visible = false;
             this.reciveButton.Click += new System.EventHandler(this.reciveButton_Click);
             // 
@@ -245,6 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.generalOutLabel);
             this.Controls.Add(this.reciveButton);
