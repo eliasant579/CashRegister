@@ -10,10 +10,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Elia Santagiuliana Cash Register
+/// </summary>
 namespace CashRegister
 {
     public partial class Form1 : Form
     {
+        //global variables 
         const double TAX = 0.13;
         const double BURGER_PRICE = 2.49, FRIES_PRICE = 1.89, DRINK_PRICE = 0.99;
         int burgerN, friesN, drinkN;
@@ -97,6 +101,7 @@ namespace CashRegister
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            //storing tendered value
             try
             {
                 if (Convert.ToInt16(tenderedTextBox.Text) < total)
@@ -121,6 +126,7 @@ namespace CashRegister
 
         private void reciveButton_Click(object sender, EventArgs e)
         {
+            //graphics and sound
             Graphics g = this.CreateGraphics();
             SoundPlayer recivePlayer = new SoundPlayer(Properties.Resources.open);
             SoundPlayer printPlayer = new SoundPlayer(Properties.Resources.print);
@@ -132,6 +138,7 @@ namespace CashRegister
             recivePlayer.PlaySync();
             g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
 
+            //printing the recive
             printPlayer.Play();
             Thread.Sleep(100);
             g.DrawString("  Ram'Donalds    ", titleFont, stringBrush, 320, 75);
@@ -160,10 +167,10 @@ namespace CashRegister
 
         private void newOrderLabel_Click(object sender, EventArgs e)
         {
+            //clear textboxes and labels
             burgersTextBox.Text = null;
             friesTextBox.Text = null;
             drinksTextBox.Text = null;
-
             totalOutLabel.Text = null;
             taxOutLabel.Text = null;
             priceOutLabel.Text = null;
@@ -172,6 +179,7 @@ namespace CashRegister
 
             reciveButton.Visible = false;
 
+            //variables to zero
             burgerN = 0;
             friesN = 0;
             drinkN = 0;
@@ -183,7 +191,6 @@ namespace CashRegister
             //draw a rectangle with the form backcolor over the recive
             Graphics g = this.CreateGraphics();
             SolidBrush rectangleBrush = new SolidBrush(this.BackColor);
-
             g.FillRectangle(rectangleBrush, 300, 50, 200, 250);
 
         }
