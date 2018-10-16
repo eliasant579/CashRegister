@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.burgerLabel = new System.Windows.Forms.Label();
             this.friesLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             // burgerLabel
             // 
             this.burgerLabel.AutoSize = true;
+            this.burgerLabel.BackColor = System.Drawing.Color.Transparent;
             this.burgerLabel.Location = new System.Drawing.Point(80, 66);
             this.burgerLabel.Name = "burgerLabel";
             this.burgerLabel.Size = new System.Drawing.Size(58, 17);
@@ -64,6 +66,7 @@
             // friesLabel
             // 
             this.friesLabel.AutoSize = true;
+            this.friesLabel.BackColor = System.Drawing.Color.Transparent;
             this.friesLabel.Location = new System.Drawing.Point(80, 94);
             this.friesLabel.Name = "friesLabel";
             this.friesLabel.Size = new System.Drawing.Size(39, 17);
@@ -73,6 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(80, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
@@ -103,9 +107,10 @@
             // totalButton
             // 
             this.totalButton.BackColor = System.Drawing.Color.Red;
+            this.totalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totalButton.Location = new System.Drawing.Point(83, 154);
             this.totalButton.Name = "totalButton";
-            this.totalButton.Size = new System.Drawing.Size(215, 23);
+            this.totalButton.Size = new System.Drawing.Size(215, 30);
             this.totalButton.TabIndex = 6;
             this.totalButton.Text = "Total";
             this.totalButton.UseVisualStyleBackColor = false;
@@ -114,6 +119,7 @@
             // priceTextLabel
             // 
             this.priceTextLabel.AutoSize = true;
+            this.priceTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.priceTextLabel.Location = new System.Drawing.Point(80, 200);
             this.priceTextLabel.Name = "priceTextLabel";
             this.priceTextLabel.Size = new System.Drawing.Size(36, 17);
@@ -123,6 +129,7 @@
             // taxTextLabel
             // 
             this.taxTextLabel.AutoSize = true;
+            this.taxTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.taxTextLabel.Location = new System.Drawing.Point(80, 227);
             this.taxTextLabel.Name = "taxTextLabel";
             this.taxTextLabel.Size = new System.Drawing.Size(31, 17);
@@ -132,6 +139,7 @@
             // totalTextLabel
             // 
             this.totalTextLabel.AutoSize = true;
+            this.totalTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.totalTextLabel.Location = new System.Drawing.Point(80, 254);
             this.totalTextLabel.Name = "totalTextLabel";
             this.totalTextLabel.Size = new System.Drawing.Size(40, 17);
@@ -173,6 +181,7 @@
             // tenderedTextLabel
             // 
             this.tenderedTextLabel.AutoSize = true;
+            this.tenderedTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.tenderedTextLabel.Location = new System.Drawing.Point(80, 301);
             this.tenderedTextLabel.Name = "tenderedTextLabel";
             this.tenderedTextLabel.Size = new System.Drawing.Size(70, 17);
@@ -182,6 +191,7 @@
             // changeTextLabel
             // 
             this.changeTextLabel.AutoSize = true;
+            this.changeTextLabel.BackColor = System.Drawing.Color.Transparent;
             this.changeTextLabel.Location = new System.Drawing.Point(81, 374);
             this.changeTextLabel.Name = "changeTextLabel";
             this.changeTextLabel.Size = new System.Drawing.Size(57, 17);
@@ -199,6 +209,7 @@
             // changeButton
             // 
             this.changeButton.BackColor = System.Drawing.Color.Red;
+            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeButton.Location = new System.Drawing.Point(82, 329);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(215, 32);
@@ -217,7 +228,8 @@
             // newOrderLabel
             // 
             this.newOrderLabel.BackColor = System.Drawing.Color.Red;
-            this.newOrderLabel.Location = new System.Drawing.Point(409, 386);
+            this.newOrderLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newOrderLabel.Location = new System.Drawing.Point(425, 395);
             this.newOrderLabel.Name = "newOrderLabel";
             this.newOrderLabel.Size = new System.Drawing.Size(215, 35);
             this.newOrderLabel.TabIndex = 19;
@@ -228,9 +240,10 @@
             // reciveButton
             // 
             this.reciveButton.BackColor = System.Drawing.Color.Red;
+            this.reciveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reciveButton.Location = new System.Drawing.Point(84, 397);
             this.reciveButton.Name = "reciveButton";
-            this.reciveButton.Size = new System.Drawing.Size(214, 24);
+            this.reciveButton.Size = new System.Drawing.Size(214, 30);
             this.reciveButton.TabIndex = 20;
             this.reciveButton.Text = "Print recive";
             this.reciveButton.UseVisualStyleBackColor = false;
@@ -249,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.generalOutLabel);
             this.Controls.Add(this.reciveButton);
@@ -273,6 +286,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.friesLabel);
             this.Controls.Add(this.burgerLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Cash Register";
             this.ResumeLayout(false);

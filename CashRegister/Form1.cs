@@ -12,6 +12,8 @@ using System.Windows.Forms;
 
 /// <summary>
 /// Elia Santagiuliana Cash Register
+/// 
+/// last edit october 15th
 /// </summary>
 namespace CashRegister
 {
@@ -130,7 +132,7 @@ namespace CashRegister
             Graphics g = this.CreateGraphics();
             SoundPlayer recivePlayer = new SoundPlayer(Properties.Resources.open);
             SoundPlayer printPlayer = new SoundPlayer(Properties.Resources.print);
-            Font drawFont = new Font("Arial", 10);
+            Font drawFont = new Font("Consolas", 10);
             Font titleFont = new Font("Arial", 16, FontStyle.Bold);
             SolidBrush rectangleBrush = new SolidBrush(Color.White);
             SolidBrush stringBrush = new SolidBrush(Color.Black);
@@ -142,24 +144,24 @@ namespace CashRegister
             printPlayer.Play();
             Thread.Sleep(100);
             g.DrawString("  Ram'Donalds    ", titleFont, stringBrush, 320, 75);
-            Thread.Sleep(100);
-            g.DrawString("Burgers:                " + burgerN, drawFont, stringBrush, 320, 110);
-            Thread.Sleep(100);
-            g.DrawString("Fries:                    " + friesN, drawFont, stringBrush, 320, 130);
-            Thread.Sleep(100);
-            g.DrawString("Drinks:                  " + drinkN, drawFont, stringBrush, 320, 150);
-            Thread.Sleep(100);
-            g.DrawString("Cost:                    " + price.ToString("C"), drawFont, stringBrush, 320, 170);
-            Thread.Sleep(100);
-            g.DrawString("Tax:                      " + taxprice.ToString("C"), drawFont, stringBrush, 320, 190);
-            Thread.Sleep(100);
-            g.DrawString("Total:                    " + total.ToString("C"), drawFont, stringBrush, 320, 210);
-            Thread.Sleep(100);
-            g.DrawString("Tendered:              " + tendered.ToString("C"), drawFont, stringBrush, 320, 230);
-            Thread.Sleep(100);
-            g.DrawString("Change:                " + change.ToString("C"), drawFont, stringBrush, 320, 250);
-            Thread.Sleep(100);
-            g.DrawString("         THANK YOU!       ", drawFont, stringBrush, 320, 270);
+            Thread.Sleep(150);
+            g.DrawString("Burgers:           " + burgerN, drawFont, stringBrush, 310, 110);
+            Thread.Sleep(150);
+            g.DrawString("Fries:             " + friesN, drawFont, stringBrush, 310, 130);
+            Thread.Sleep(150);
+            g.DrawString("Drinks:            " + drinkN, drawFont, stringBrush, 310, 150);
+            Thread.Sleep(150);
+            g.DrawString("Cost:            " + price.ToString("C"), drawFont, stringBrush, 310, 170);
+            Thread.Sleep(150);
+            g.DrawString("Tax:             " + taxprice.ToString("C"), drawFont, stringBrush, 310, 190);
+            Thread.Sleep(150);
+            g.DrawString("Total:           " + total.ToString("C"), drawFont, stringBrush, 310, 210);
+            Thread.Sleep(150);
+            g.DrawString("Tendered:        " + tendered.ToString("C"), drawFont, stringBrush, 310, 230);
+            Thread.Sleep(150);
+            g.DrawString("Change:          " + change.ToString("C"), drawFont, stringBrush, 310, 250);
+            Thread.Sleep(150);
+            g.DrawString("      THANK YOU!     ", drawFont, stringBrush, 310, 270);
 
 
 
